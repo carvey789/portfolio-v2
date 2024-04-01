@@ -1,0 +1,116 @@
+<div class="relative overflow-hidden">
+  <div
+    class="tk-blob w-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+    style="--time: 60s; --amount: 5;"
+  >
+    <svg
+      width="500"
+      viewBox="0 0 598 585"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M297.115 28.1601C346.418 33.1227 401.334 9.47977 443.012 36.2809C484.661 63.0626 490.246 120.559 510.835 165.591C529.488 206.392 547.396 245.528 558.545 288.983C572.739 344.303 620.533 410.446 585.159 455.285C547.494 503.028 463.66 456.789 407.59 480.331C361.85 499.535 344.527 561.628 297.115 576.223C245.654 592.064 188.93 582.909 138.883 563.048C84.7959 541.583 17.6167 515.343 2.26602 459.214C-13.9307 399.991 61.9401 350.348 63.9299 288.983C65.8166 230.798 -0.699964 181.564 13.1028 125.008C26.7487 69.095 78.7396 23.6731 133.214 5.09745C186.338 -13.018 241.269 22.5388 297.115 28.1601Z"
+        fill="url(#paint0_linear_3_24)"></path>
+      <defs>
+        <linearGradient
+          id="paint0_linear_3_24"
+          x1="-267.581"
+          y1="295.139"
+          x2="288.88"
+          y2="864.603"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E25544"></stop>
+          <stop offset="1" stop-color="#620C90"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="tk-blob w-1/2" style="--time: 40s; --amount: 5;">
+    <span>
+      <svg
+        width="500"
+        viewBox="0 0 401 278"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M199.48 0.936696C282.441 0.362211 368.388 25.9599 394.079 83.4923C419.812 141.119 370.265 197.936 303.614 234.134C233.859 272.018 141.237 295.97 70.172 259.404C-3.22019 221.641 -14.8545 147.648 15.932 86.1108C43.4122 31.182 119.31 1.49185 199.48 0.936696Z"
+          fill="url(#paint0_linear_22_5)"
+          fill-opacity="0.5"></path>
+        <defs>
+          <linearGradient
+            id="paint0_linear_22_5"
+            x1="-5.27824e-06"
+            y1="277.555"
+            x2="385.058"
+            y2="46.5544"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#6CACE4"></stop>
+            <stop offset="0.0666667" stop-color="#6CACE4"></stop>
+            <stop offset="0.133333" stop-color="#6DADE4"></stop>
+            <stop offset="0.2" stop-color="#6FAEE5"></stop>
+            <stop offset="0.266667" stop-color="#72B0E5"></stop>
+            <stop offset="0.333333" stop-color="#75B3E6"></stop>
+            <stop offset="0.4" stop-color="#79B6E7"></stop>
+            <stop offset="0.466667" stop-color="#7DB9E8"></stop>
+            <stop offset="0.533333" stop-color="#82BDEA"></stop>
+            <stop offset="0.6" stop-color="#86C0EB"></stop>
+            <stop offset="0.666667" stop-color="#8AC3EC"></stop>
+            <stop offset="0.733333" stop-color="#8DC6ED"></stop>
+            <stop offset="0.8" stop-color="#90C8ED"></stop>
+            <stop offset="0.866667" stop-color="#92C9EE"></stop>
+            <stop offset="0.933333" stop-color="#93CAEE"></stop>
+            <stop offset="1" stop-color="#93CAEE"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </span>
+  </div>
+</div>
+<style>
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 1px;
+    background-color: #23262d;
+    background-image: none;
+    background-size: 400%;
+    border-radius: 7px;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
+  }
+</style>
