@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        jim: ['"Jim Nightshade"', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         "white-main": "#f8f7f4",
