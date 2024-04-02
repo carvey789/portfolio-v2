@@ -56,7 +56,7 @@ function Hamburger({ toggled, onClick }: HamburgerProps) {
 function MobileNav({ navlist, toggled, activePath }: MobileNavProps) {
   return (
     <nav
-      className={`absolute top-0 left-0 flex items-center justify-center w-1/3 h-screen px-6 bg-black-nav/70 backdrop-blur transition-transform  ${
+      className={`absolute top-0 left-0 flex items-center justify-center w-1/3 h-screen px-6 bg-black-nav backdrop-blur-lg transition-transform ${
         toggled ? "" : "-translate-x-full"
       }`}
     >
@@ -84,48 +84,50 @@ export default function Navbar({ activePath }: NavbarProps) {
   const matches = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <header className="relative flex items-center justify-between py-4 px-6 bg-black-nav/80 lg:px-[120px]">
-      <div className="flex items-center gap-4">
+    <div className="fixed w-screen z-50">
+      <header className="relative flex items-center justify-between py-4 px-6 bg-black-nav/80 lg:px-[120px] backdrop-blur-lg">
+        <div className="flex items-center gap-4">
+          {!matches && (
+            <Hamburger
+              toggled={toggled}
+              onClick={() => setToggled((prevToggled) => !prevToggled)}
+            />
+          )}
+          <a href="/">
+            <span className={`font-bold text-2xl ${!matches && "pl-8"}`}>
+              carvey.
+            </span>
+          </a>
+        </div>
         {!matches && (
-          <Hamburger
+          <MobileNav
             toggled={toggled}
-            onClick={() => setToggled((prevToggled) => !prevToggled)}
+            navlist={navitems}
+            activePath={activePath}
           />
         )}
-        <a href="/">
-          <span className={`font-bold text-2xl ${!matches && "pl-8"}`}>
-            carvey.
-          </span>
-        </a>
-      </div>
-      {!matches && (
-        <MobileNav
-          toggled={toggled}
-          navlist={navitems}
-          activePath={activePath}
-        />
-      )}
-      {matches && (
-        <nav>
-          <ul className="flex gap-20">
-            {navitems.map((nav) => (
-              <li key={nav.href} className="group text-sm">
-                <a
-                  className={
-                    activePath !== nav.href ? "text-white-main/40" : ""
-                  }
-                  href={nav.href}
-                >
-                  {nav.title}
-                  <span className="text-lg pl-1 transition-opacity opacity-0 group-hover:opacity-100">
-                    •
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
-    </header>
+        {matches && (
+          <nav>
+            <ul className="flex gap-20">
+              {navitems.map((nav) => (
+                <li key={nav.href} className="group text-sm lg:text-base">
+                  <a
+                    className={
+                      activePath !== nav.href ? "text-white-main/40" : ""
+                    }
+                    href={nav.href}
+                  >
+                    {nav.title}
+                    <span className="text-lg pl-1 transition-opacity opacity-0 group-hover:opacity-100">
+                      •
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </header>
+    </div>
   );
 }

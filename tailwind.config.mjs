@@ -12,6 +12,7 @@ export default {
         "white-main": "#f8f7f4",
         "black-main": "#1c1c1c",
         "black-nav": "#0f0f11",
+        "border-color": "#d1d1d1",
       },
     },
   },
