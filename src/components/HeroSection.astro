@@ -1,0 +1,56 @@
+<section class="pt-24 lg:pt-[100px]">
+  <h1
+    class="text-xl leading-relaxed w-1/2 sm:text-4xl lg:text-[48px] lg:font-semibold lg:leading-normal"
+  >
+    Hi! Carvey’s here, a web developer based in Indonesia.
+  </h1>
+  <div class="flex justify-between flex-row-reverse mt-8 sm:mt-12 md:mt-16">
+    <h1
+      class="text-xl leading-relaxed w-1/2 sm:text-4xl lg:text-[48px] lg:font-semibold lg:leading-normal"
+    >
+      Let’s develop your idea in to reality!
+    </h1>
+    <span
+      class="text-xl text-center leading-relaxed font-light mx-4 italic sm:text-4xl md:ml-16 lg:text-[48px]"
+      ><a href="#work-section"
+        >Learn More! <br />
+        <span class="inline-block scroll mt-4"></span></a
+      ></span
+    >
+  </div>
+</section>
+
+<style>
+  .scroll {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #f8f7f4;
+    border-radius: 50%;
+    position: relative;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #f8f7f4;
+      border-bottom: 2px solid #f8f7f4;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes down {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translateY(15px);
+    }
+    40% {
+      transform: translate(0);
+    }
+  }
+</style>

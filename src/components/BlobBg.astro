@@ -1,0 +1,121 @@
+<div
+  class="fixed flex justify-center items-center h-screen w-screen bg-transparent"
+>
+  <svg
+    width="829"
+    height="428"
+    viewBox="0 0 829 428"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M199.48 91.9367C282.441 91.3622 368.388 116.96 394.079 174.492C419.812 232.119 370.265 288.936 303.614 325.134C233.859 363.018 141.237 386.97 70.172 350.404C-3.22019 312.641 -14.8545 238.648 15.932 177.111C43.4122 122.182 119.31 92.4919 199.48 91.9367Z"
+      fill="url(#paint0_linear_98_15)"
+      fill-opacity="0.5"></path>
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M528.115 21.2446C577.418 24.8669 632.334 7.6101 674.012 27.172C715.661 46.7197 721.246 88.6854 741.835 121.554C760.488 151.334 778.396 179.899 789.545 211.616C803.739 251.994 851.533 300.271 816.159 332.999C778.494 367.846 694.66 334.096 638.59 351.279C592.85 365.296 575.527 410.617 528.115 421.27C476.654 432.832 419.93 426.15 369.883 411.653C315.796 395.987 248.617 376.834 233.266 335.866C217.069 292.64 292.94 256.406 294.93 211.616C296.817 169.148 230.3 133.212 244.103 91.933C257.749 51.1226 309.74 17.9697 364.214 4.41149C417.338 -8.81075 472.269 17.1417 528.115 21.2446Z"
+      fill="url(#paint1_linear_98_15)"
+      fill-opacity="0.5"></path>
+    <defs>
+      <linearGradient
+        id="paint0_linear_98_15"
+        x1="-5.27824e-06"
+        y1="368.555"
+        x2="385.058"
+        y2="137.554"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#6CACE4"></stop>
+        <stop offset="0.0666667" stop-color="#6CACE4"></stop>
+        <stop offset="0.133333" stop-color="#6DADE4"></stop>
+        <stop offset="0.2" stop-color="#6FAEE5"></stop>
+        <stop offset="0.266667" stop-color="#72B0E5"></stop>
+        <stop offset="0.333333" stop-color="#75B3E6"></stop>
+        <stop offset="0.4" stop-color="#79B6E7"></stop>
+        <stop offset="0.466667" stop-color="#7DB9E8"></stop>
+        <stop offset="0.533333" stop-color="#82BDEA"></stop>
+        <stop offset="0.6" stop-color="#86C0EB"></stop>
+        <stop offset="0.666667" stop-color="#8AC3EC"></stop>
+        <stop offset="0.733333" stop-color="#8DC6ED"></stop>
+        <stop offset="0.8" stop-color="#90C8ED"></stop>
+        <stop offset="0.866667" stop-color="#92C9EE"></stop>
+        <stop offset="0.933333" stop-color="#93CAEE"></stop>
+        <stop offset="1" stop-color="#93CAEE"></stop>
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_98_15"
+        x1="-36.5808"
+        y1="216.109"
+        x2="347.536"
+        y2="754.675"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#E25544"></stop>
+        <stop offset="1" stop-color="#620C90"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="fixed h-full w-screen bg-black-main/20 backdrop-blur-[80px]">
+  </div>
+  <div class="fixed h-full w-screen flex">
+    <div class="h-full w-1/5 bg-transparent"></div>
+    <div
+      class="h-full w-1/5 bg-transparent border-l-[0.5px] border-border-color/20"
+    >
+    </div>
+    <div
+      class="h-full w-1/5 bg-transparent border-x-[0.5px] border-border-color/20"
+    >
+    </div>
+    <div
+      class="h-full w-1/5 bg-transparent border-r-[0.5px] border-border-color/20"
+    >
+    </div>
+    <div class="h-full w-1/5 bg-transparent"></div>
+  </div>
+
+  <style>
+    .link-card {
+      list-style: none;
+      display: flex;
+      padding: 1px;
+      background-color: #23262d;
+      background-image: none;
+      background-size: 400%;
+      border-radius: 7px;
+      background-position: 100%;
+      transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    .link-card > a {
+      width: 100%;
+      text-decoration: none;
+      line-height: 1.4;
+      padding: calc(1.5rem - 1px);
+      border-radius: 8px;
+      color: white;
+      background-color: #23262d;
+      opacity: 0.8;
+    }
+    h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+    .link-card:is(:hover, :focus-within) {
+      background-position: 0;
+      background-image: var(--accent-gradient);
+    }
+    .link-card:is(:hover, :focus-within) h2 {
+      color: rgb(var(--accent-light));
+    }
+  </style>
+</div>
