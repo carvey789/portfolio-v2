@@ -1,6 +1,16 @@
 # carveych.com / Personal Website of Carvey Chennico
 
-This is my personal website to show my profile, projects, professional experiences, services, socials, and more.
+This is my personal website to show my profile, projects, professional experiences, services, socials, and more.\
+Build using Astro, React, and Tailwind
+
+## Requirement
+
+- Node >= `v18.14.1`
+
+## Run in local
+
+- Install the package using `npm install`
+- Run using `npm run dev`
 
 ## Links
 
