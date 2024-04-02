@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useMediaQuery } from "../hooks/useMediaQuery";
 
@@ -80,8 +80,13 @@ function MobileNav({ navlist, toggled, activePath }: MobileNavProps) {
 }
 
 export default function Navbar({ activePath }: NavbarProps) {
+  const [currPath, setCurrPath] = useState(activePath);
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(min-width: 1024px)");
+
+  useEffect(() => {
+    if (currPath !== activePath) setCurrPath(activePath);
+  }, [activePath]);
 
   return (
     <div className="fixed w-screen z-50">
@@ -103,7 +108,7 @@ export default function Navbar({ activePath }: NavbarProps) {
           <MobileNav
             toggled={toggled}
             navlist={navitems}
-            activePath={activePath}
+            activePath={currPath}
           />
         )}
         {matches && (
@@ -113,7 +118,7 @@ export default function Navbar({ activePath }: NavbarProps) {
                 <li key={nav.href} className="group text-sm lg:text-base">
                   <a
                     className={
-                      activePath !== nav.href ? "text-white-main/40" : ""
+                      currPath !== nav.href ? "text-white-main/40" : ""
                     }
                     href={nav.href}
                   >
