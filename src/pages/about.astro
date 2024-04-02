@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="About Carvey." description="Know Carvey as a personal.">
+  <main>
+    <section class="py-20 sm:py-24 lg:py-[120px]">
+      <div
+        class="flex flex-col justify-center items-center lg:flex-row lg:justify-between"
+      >
+        <Image
+          src={"/assets/profile.jpg"}
+          alt="Carvey"
+          width={360}
+          height={360}
+          class="w-[240px] h-[240px] object-cover rounded-full lg:w-[360px] lg:h-[360px]"
+        />
+        <div
+          class="flex flex-col justify-center items-center lg:items-start lg:w-1/2"
+        >
+          <h1 class="text-2xl font-semibold my-8 lg:text-4xl">
+            Hi, I am Carvey.
+          </h1>
+          <p class="sm:max-w-prose">
+            I am a web developer that have more than 2+ years on professional
+            experiences. I like everything related to web development. I really
+            enjoy challenges that push me to my limit.
+          </p>
+          <div class="mt-10 sm:mt-16 lg:mt-20">
+            <a href="/contact">
+              <span
+                class="font-jim inline-block py-4 px-8 rounded-[50%] border transition-all hover:rounded-none md:text-2xl"
+                >Let's Connect!</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
