@@ -52,7 +52,7 @@ function MobileNav({ navlist, toggled }: MobileNavProps) {
   return (
     <nav
       className={`absolute top-0 left-0 flex items-center justify-center w-1/3 h-screen px-6 bg-black-nav backdrop-blur-lg transition-transform ${
-        toggled ? "" : "-translate-x-full"
+        toggled ? "" : "-translate-x-[130%]"
       }`}
     >
       <ul className="flex flex-col gap-8">
@@ -76,8 +76,8 @@ export default function Navbar() {
   const matches = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <div className="fixed w-screen bg-black-nav/80 z-50 py-4 px-6 lg:px-[120px]">
-      <header className="relative flex items-center justify-between backdrop-blur-lg max-w-[1440px] mx-auto">
+    <div className="fixed w-screen bg-black-nav/80 z-50 ">
+      <header className="relative flex items-center justify-between backdrop-blur-lg py-4 px-6 lg:px-[120px] max-w-[1440px] mx-auto">
         <div className="flex items-center gap-4">
           {!matches && (
             <Hamburger
