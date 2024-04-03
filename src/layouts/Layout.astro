@@ -32,14 +32,15 @@ const { title, description } = Astro.props;
       <BlobBg />
     </div>
     <Navbar activePath={Astro.url.pathname} client:load />
-    <div class="max-w-[1440px] mx-auto"></div>
-    <div class="px-6 lg:px-[120px] relative z-10">
-      <slot />
-    </div>
-    <div
-      class="px-6 lg:px-[120px] relative z-10 bg-black-main py-20 sm:py-24 lg:py-[120px]"
-    >
-      <Footer />
+    <div class="max-w-[1440px] mx-auto">
+      <div class="px-6 lg:px-[120px] relative z-10">
+        <slot />
+      </div>
+      <div
+        class="px-6 lg:px-[120px] relative z-10 bg-black-main py-20 sm:py-24 lg:py-[120px]"
+      >
+        <Footer />
+      </div>
     </div>
   </body>
 </html>
