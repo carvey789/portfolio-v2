@@ -27,18 +27,20 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-black-main text-white-main min-h-full max-w-[1440px]">
-    <div class="h-full">
-      <BlobBg />
-    </div>
-    <Navbar activePath={Astro.url.pathname} client:load />
-    <div class="px-6 lg:px-[120px] relative z-10">
-      <slot />
-    </div>
-    <div
-      class="px-6 lg:px-[120px] relative z-10 bg-black-main py-20 sm:py-24 lg:py-[120px]"
-    >
-      <Footer />
+  <body class="bg-black-main text-white-main min-h-full">
+    <div class="max-w-[1440px] flex justify-center items-center">
+      <div class="h-full">
+        <BlobBg />
+      </div>
+      <Navbar activePath={Astro.url.pathname} client:load />
+      <div class="px-6 lg:px-[120px] relative z-10">
+        <slot />
+      </div>
+      <div
+        class="px-6 lg:px-[120px] relative z-10 bg-black-main py-20 sm:py-24 lg:py-[120px]"
+      >
+        <Footer />
+      </div>
     </div>
   </body>
 </html>
