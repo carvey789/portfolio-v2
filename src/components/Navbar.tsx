@@ -89,7 +89,7 @@ export default function Navbar({ activePath }: NavbarProps) {
   }, [activePath]);
 
   return (
-    <div className="fixed w-screen z-50">
+    <div className="fixed w-screen z-50 max-w-[1440px]">
       <header className="relative flex items-center justify-between py-4 px-6 bg-black-nav/80 lg:px-[120px] backdrop-blur-lg">
         <div className="flex items-center gap-4">
           {!matches && (
